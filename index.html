@@ -1,96 +1,1309 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pattern Recognition World</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Tajawal',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);min-height:100vh;color:#fff;overflow-x:hidden;direction:rtl}
+.stars-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.star{position:absolute;background:#fff;border-radius:50%;animation:twinkle 3s infinite}
+@keyframes twinkle{0%,100%{opacity:0.2;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(3deg)}}
+@keyframes slideIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes msgIn{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes msgInLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes bounce{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes confettiFall{0%{transform:translateY(-100px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+@keyframes drFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes ringPulse{0%,100%{opacity:0.3;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.05)}}
+@keyframes sparkle{0%,100%{opacity:0.3;transform:scale(0.8)}50%{opacity:1;transform:scale(1.2)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 20px rgba(255,107,107,0.5)}50%{box-shadow:0 0 40px rgba(255,107,107,0.9)}}
+.screen{display:none;position:relative;z-index:1;min-height:100vh;padding:20px}
+.screen.active{display:flex;flex-direction:column;align-items:center;animation:slideIn 0.5s ease}
+#home-screen{justify-content:center;text-align:center;padding:40px 20px}
+.home-avatar-wrap{position:relative;margin-bottom:20px}
+.home-avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid #ffd93d;animation:float 3s ease-in-out infinite;box-shadow:0 0 30px rgba(255,217,61,0.6)}
+.home-avatar-fallback{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#ff6b6b,#ffd93d);display:flex;align-items:center;justify-content:center;font-size:60px;border:4px solid #ffd93d;animation:float 3s ease-in-out infinite;box-shadow:0 0 30px rgba(255,217,61,0.6)}
+.speech-bubble{background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:2px solid rgba(255,217,61,0.5);border-radius:20px;padding:15px 25px;margin:15px auto;max-width:500px;font-size:1.1rem;position:relative}
+.speech-bubble::after{content:"";position:absolute;top:-15px;right:50%;transform:translateX(50%);border:8px solid transparent;border-bottom-color:rgba(255,217,61,0.5)}
+.main-title{font-size:2.5rem;font-weight:900;background:linear-gradient(135deg,#ffd93d,#ff6b6b,#4d96ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:10px 0}
+.main-subtitle{font-size:1.1rem;color:rgba(255,255,255,0.8);margin-bottom:30px}
+.categories-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;width:100%;max-width:900px;margin-top:20px}
+.cat-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border-radius:20px;padding:30px 20px;cursor:pointer;transition:all 0.3s ease;border:2px solid transparent;text-align:center}
+.cat-card:hover{transform:translateY(-10px);border-color:var(--cat-color);box-shadow:0 20px 40px rgba(0,0,0,0.3),0 0 30px var(--cat-glow)}
+.cat-card.cat1{--cat-color:#ff6b6b;--cat-glow:rgba(255,107,107,0.4)}
+.cat-card.cat2{--cat-color:#6bcb77;--cat-glow:rgba(107,203,119,0.4)}
+.cat-card.cat3{--cat-color:#4d96ff;--cat-glow:rgba(77,150,255,0.4)}
+.cat-icon{font-size:3rem;margin-bottom:15px;display:block}
+.cat-title{font-size:1.3rem;font-weight:700;color:var(--cat-color);margin-bottom:8px}
+.cat-desc{font-size:0.9rem;color:rgba(255,255,255,0.7)}
+.back-btn{position:fixed;top:20px;left:20px;background:rgba(255,255,255,0.15);border:2px solid rgba(255,255,255,0.3);color:#fff;padding:10px 20px;border-radius:30px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:1rem;z-index:100;transition:all 0.3s;display:none}
+.back-btn:hover{background:rgba(255,255,255,0.25);transform:scale(1.05)}
+#cat1-screen{padding:20px;max-width:800px;margin:0 auto;width:100%}
+.slide-container{background:rgba(255,255,255,0.08);backdrop-filter:blur(15px);border-radius:25px;padding:30px;width:100%;max-width:750px;border:2px solid rgba(255,107,107,0.3);margin-top:60px}
+.slide-header{display:flex;align-items:center;gap:15px;margin-bottom:20px;padding-bottom:15px;border-bottom:2px solid rgba(255,107,107,0.3)}
+.slide-avatar{width:50px;height:50px;border-radius:50%;object-fit:cover;border:3px solid #ff6b6b}
+.slide-avatar-fallback{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#ff6b6b,#ffd93d);display:flex;align-items:center;justify-content:center;font-size:24px;border:3px solid #ff6b6b}
+.slide-title{font-size:1.4rem;font-weight:700;color:#ff6b6b;flex:1}
+.slide-counter{background:rgba(255,107,107,0.2);padding:5px 15px;border-radius:20px;font-size:0.9rem;color:#ff6b6b;border:1px solid rgba(255,107,107,0.4)}
+.slide-content{min-height:200px;margin-bottom:20px;line-height:1.8;font-size:1rem}
+.formula-box{background:rgba(255,107,107,0.15);border:2px solid rgba(255,107,107,0.5);border-radius:15px;padding:15px 20px;margin:15px 0;text-align:center;font-size:1.2rem;font-weight:700;color:#ffd93d;font-family:monospace}
+.example-box{background:rgba(255,255,255,0.08);border-right:4px solid #ff6b6b;padding:12px 15px;margin:10px 0;border-radius:0 10px 10px 0}
+.note-box{background:rgba(255,217,61,0.1);border:1px solid rgba(255,217,61,0.4);border-radius:10px;padding:10px 15px;margin:10px 0;font-size:0.9rem;color:#ffd93d}
+.points-visual{display:flex;gap:20px;justify-content:center;margin:15px 0;flex-wrap:wrap}
+.point-badge{background:rgba(255,255,255,0.1);border:2px solid #4d96ff;border-radius:15px;padding:10px 20px;font-size:1.1rem;font-weight:700;color:#4d96ff}
+.slide-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.nav-btn{background:rgba(255,107,107,0.2);border:2px solid #ff6b6b;color:#ff6b6b;padding:10px 25px;border-radius:25px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:700;transition:all 0.3s}
+.nav-btn:hover:not(:disabled){background:#ff6b6b;color:#fff;transform:scale(1.05)}
+.nav-btn:disabled{opacity:0.3;cursor:not-allowed}
+.tts-btn{background:rgba(255,217,61,0.2);border:2px solid #ffd93d;color:#ffd93d;padding:10px 20px;border-radius:25px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:0.95rem;transition:all 0.3s}
+.tts-btn:hover{background:#ffd93d;color:#1a1a2e}
+.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}
+.quiz-opt{background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.3);color:#fff;padding:12px 20px;border-radius:15px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:1rem;transition:all 0.3s;text-align:center}
+.quiz-opt:hover:not(:disabled){background:rgba(255,107,107,0.3);border-color:#ff6b6b;transform:scale(1.02)}
+.quiz-opt.correct{background:rgba(107,203,119,0.3);border-color:#6bcb77;color:#6bcb77}
+.quiz-opt.wrong{background:rgba(255,107,107,0.3);border-color:#ff6b6b;color:#ff6b6b}
+.quiz-opt:disabled{cursor:not-allowed}
+.feedback-box{padding:15px;border-radius:15px;margin-top:10px;font-size:1rem;line-height:1.6;display:none}
+.feedback-box.correct{background:rgba(107,203,119,0.2);border:2px solid #6bcb77;color:#6bcb77}
+.feedback-box.wrong{background:rgba(255,107,107,0.2);border:2px solid #ff6b6b;color:#ff6b6b}
+#cat2-screen{padding:20px;width:100%;max-width:800px;margin:0 auto}
+.pipeline-bar{display:flex;align-items:center;justify-content:center;gap:5px;margin:70px auto 20px;flex-wrap:wrap;max-width:750px}
+.pipeline-step{background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.2);border-radius:20px;padding:8px 14px;font-size:0.8rem;color:rgba(255,255,255,0.5);transition:all 0.5s;white-space:nowrap}
+.pipeline-step.active{background:rgba(107,203,119,0.3);border-color:#6bcb77;color:#6bcb77;font-weight:700;box-shadow:0 0 15px rgba(107,203,119,0.4)}
+.pipeline-arrow{color:rgba(255,255,255,0.3);font-size:1rem}
+.chat-container{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border-radius:20px;padding:20px;width:100%;max-width:750px;min-height:300px;max-height:500px;overflow-y:auto;border:2px solid rgba(107,203,119,0.3);margin-bottom:15px}
+.chat-msg{display:flex;gap:12px;margin-bottom:20px;animation:msgIn 0.5s ease}
+.chat-msg.dr{flex-direction:row;animation:msgInLeft 0.5s ease}
+.chat-msg.student{flex-direction:row-reverse}
+.msg-avatar{width:45px;height:45px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid #6bcb77}
+.msg-avatar.student-av{border-color:#4d96ff}
+.msg-avatar-fallback{width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;border:3px solid #6bcb77;background:rgba(107,203,119,0.2)}
+.msg-avatar-fallback.student-av{border-color:#4d96ff;background:rgba(77,150,255,0.2)}
+.msg-body{max-width:75%}
+.msg-name{font-size:0.8rem;font-weight:700;margin-bottom:5px;color:#6bcb77}
+.msg-name.student-name{color:#4d96ff;text-align:right}
+.msg-bubble{padding:12px 16px;border-radius:18px;line-height:1.7;font-size:0.95rem}
+.chat-msg.dr .msg-bubble{background:rgba(107,203,119,0.15);border:1px solid rgba(107,203,119,0.3);border-radius:5px 18px 18px 18px}
+.chat-msg.student .msg-bubble{background:rgba(77,150,255,0.15);border:1px solid rgba(77,150,255,0.3);border-radius:18px 5px 18px 18px;text-align:right}
+.cat2-controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.ctrl-btn{padding:12px 25px;border-radius:25px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:700;transition:all 0.3s;border:2px solid}
+.ctrl-btn.next-btn{background:rgba(107,203,119,0.2);border-color:#6bcb77;color:#6bcb77}
+.ctrl-btn.next-btn:hover{background:#6bcb77;color:#1a1a2e}
+.ctrl-btn.tts-btn2{background:rgba(255,217,61,0.2);border-color:#ffd93d;color:#ffd93d}
+.ctrl-btn.tts-btn2:hover{background:#ffd93d;color:#1a1a2e}
+.ctrl-btn.reset-btn{background:rgba(255,107,107,0.2);border-color:#ff6b6b;color:#ff6b6b}
+.ctrl-btn.reset-btn:hover{background:#ff6b6b;color:#fff}
+.ctrl-btn:disabled{opacity:0.4;cursor:not-allowed}
+#cat3-screen{padding:20px;width:100%;max-width:700px;margin:0 auto}
+.game-header{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border-radius:20px;padding:15px 25px;width:100%;max-width:650px;margin:70px auto 20px;border:2px solid rgba(77,150,255,0.3);flex-wrap:wrap;gap:10px}
+.score-display{font-size:1.2rem;font-weight:700;color:#ffd93d}
+.level-badge{background:rgba(77,150,255,0.3);border:2px solid #4d96ff;border-radius:20px;padding:5px 15px;font-size:0.9rem;color:#4d96ff;font-weight:700}
+.timer-wrap{width:100%;margin-top:5px}
+.timer-bar-bg{background:rgba(255,255,255,0.1);border-radius:10px;height:8px;overflow:hidden;width:100%}
+.timer-bar{height:100%;background:linear-gradient(90deg,#6bcb77,#ffd93d,#ff6b6b);border-radius:10px;transition:width 0.1s linear}
+.question-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(15px);border-radius:25px;padding:30px;width:100%;max-width:650px;border:2px solid rgba(77,150,255,0.3);margin-bottom:15px}
+.q-level-tag{display:inline-block;background:rgba(77,150,255,0.2);border:1px solid #4d96ff;border-radius:15px;padding:4px 12px;font-size:0.85rem;color:#4d96ff;margin-bottom:15px}
+.q-text{font-size:1.15rem;font-weight:700;margin-bottom:20px;line-height:1.6}
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt-btn{background:rgba(255,255,255,0.08);border:2px solid rgba(255,255,255,0.2);color:#fff;padding:14px 18px;border-radius:15px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:1rem;transition:all 0.3s;text-align:center;line-height:1.4}
+.opt-btn:hover:not(:disabled){background:rgba(77,150,255,0.3);border-color:#4d96ff;transform:scale(1.02)}
+.opt-btn.correct{background:rgba(107,203,119,0.3)!important;border-color:#6bcb77!important;color:#6bcb77!important}
+.opt-btn.wrong{background:rgba(255,107,107,0.3)!important;border-color:#ff6b6b!important;color:#ff6b6b!important}
+.opt-btn:disabled{cursor:not-allowed}
+.q-feedback{padding:15px;border-radius:15px;margin-top:15px;font-size:0.95rem;line-height:1.6;display:none}
+.q-feedback.correct{background:rgba(107,203,119,0.2);border:2px solid #6bcb77;color:#6bcb77}
+.q-feedback.wrong{background:rgba(255,107,107,0.2);border:2px solid #ff6b6b;color:#ff6b6b}
+.next-q-btn{display:none;background:rgba(77,150,255,0.2);border:2px solid #4d96ff;color:#4d96ff;padding:12px 30px;border-radius:25px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:1rem;font-weight:700;margin-top:15px;transition:all 0.3s;width:100%;text-align:center}
+.next-q-btn:hover{background:#4d96ff;color:#fff}
+#result-screen{justify-content:center;text-align:center;padding:40px 20px}
+.result-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(15px);border-radius:30px;padding:40px;max-width:500px;width:100%;border:2px solid rgba(255,217,61,0.4)}
+.result-emoji{font-size:5rem;margin-bottom:20px;display:block;animation:bounce 1s ease infinite}
+.result-score{font-size:3rem;font-weight:900;color:#ffd93d;margin:10px 0}
+.result-title{font-size:1.5rem;font-weight:700;margin:10px 0;color:#fff}
+.result-desc{color:rgba(255,255,255,0.7);margin:10px 0;line-height:1.6}
+.replay-btn{background:linear-gradient(135deg,#4d96ff,#6bcb77);border:none;color:#fff;padding:15px 40px;border-radius:30px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:1.1rem;font-weight:700;margin-top:20px;transition:all 0.3s}
+.replay-btn:hover{transform:scale(1.05);box-shadow:0 10px 30px rgba(77,150,255,0.4)}
+.confetti-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:200}
+.confetti-piece{position:absolute;width:10px;height:10px;border-radius:2px;animation:confettiFall linear forwards}
+@media(max-width:600px){
+.main-title{font-size:1.8rem}
+.categories-grid{grid-template-columns:1fr}
+.quiz-options,.options-grid{grid-template-columns:1fr}
+.pipeline-bar{gap:3px}
+.pipeline-step{font-size:0.7rem;padding:6px 10px}
+.game-header{padding:10px 15px}
+.slide-container,.question-card{padding:20px}
+}
+</style>
+</head>
+<body>
+<div class="stars-container" id="stars"></div>
+<button class="back-btn" id="backBtn" onclick="goHome()">&#127968; الرئيسية</button>
+<div class="confetti-container" id="confettiContainer"></div>
+
+<!-- HOME SCREEN -->
+<div id="home-screen" class="screen active">
+
+  <!-- Top bar: Pharos logo + mute button -->
+  <div style="display:flex;align-items:center;justify-content:space-between;width:100%;max-width:900px;margin-bottom:18px;gap:12px;flex-wrap:wrap">
+
+    <!-- Pharos University Logo -->
+    <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:10px 18px;backdrop-filter:blur(10px);flex:1;min-width:220px">
+      <div style="width:60px;height:60px;border-radius:12px;overflow:hidden;border:2px solid #ffd93d;box-shadow:0 0 15px rgba(255,217,61,0.4);flex-shrink:0;background:#fff;display:flex;align-items:center;justify-content:center">
+        <img src="logo.jpg" style="width:100%;height:100%;object-fit:contain" onerror="this.parentElement.innerHTML='<span style=\'color:#003366;font-weight:900;font-size:1.3rem\'>PU</span>'">
+      </div>
+      <div>
+        <div style="font-size:1rem;font-weight:900;color:#ffd93d;letter-spacing:1px">Pharos University</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.65)">Faculty of Computer Science &amp; Artificial Intelligence</div>
+      </div>
+    </div>
+
+    <!-- Course code -->
+    <div style="background:rgba(77,150,255,0.15);border:2px solid #4d96ff;border-radius:12px;padding:8px 16px;text-align:center">
+      <div style="font-size:1.1rem;font-weight:900;color:#4d96ff;letter-spacing:2px">AI304</div>
+      <div style="font-size:0.65rem;color:rgba(255,255,255,0.6)">Pattern Recognition</div>
+    </div>
+  </div>
+
+  <h1 class="main-title">Pattern Recognition World 🎮</h1>
+  <p class="main-subtitle">AI304 — Pattern Recognition Course</p>
+
+  <div class="categories-grid">
+    <div class="cat-card cat1" onclick="showScreen('cat1-screen')">
+      <span class="cat-icon">🎓</span>
+      <div class="cat-title">Dr. Lamiaa Explains</div>
+      <div class="cat-desc">Similarity Measures — Interactive Slides</div>
+    </div>
+    <div class="cat-card cat2" onclick="showScreen('cat2-screen')">
+      <span class="cat-icon">💬</span>
+      <div class="cat-title">Project Discussion</div>
+      <div class="cat-desc">Face Recognition Graduation Project Pipeline</div>
+    </div>
+    <div class="cat-card cat3" onclick="showScreen('cat3-screen')">
+      <span class="cat-icon">🕹️</span>
+      <div class="cat-title">Think Like a Machine</div>
+      <div class="cat-desc">Interactive Quiz — 3 Levels</div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORY 1 SCREEN -->
+<div id="cat1-screen" class="screen">
+
+  <!-- Dr. Lamiaa figure next to blackboard -->
+  <div id="cat1-scene" style="display:flex;align-items:flex-end;justify-content:center;width:100%;max-width:900px;gap:0;margin-top:60px;margin-bottom:-20px;position:relative">
+
+    <!-- Blackboard -->
+    <div style="background:#1a3a2a;border:6px solid #5a3a1a;border-radius:8px;width:320px;min-height:200px;padding:20px;position:relative;box-shadow:0 8px 30px rgba(0,0,0,0.5);flex-shrink:0">
+      <div style="position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:#5a3a1a;padding:4px 20px;border-radius:4px;font-size:0.75rem;color:#d4a96a;font-weight:700;white-space:nowrap">Similarity Measures</div>
+      <div style="color:#a8d8a8;font-family:monospace;font-size:0.85rem;line-height:2">
+        <div>d<sub>E</sub> = √[(x₂-x₁)² + (y₂-y₁)²]</div>
+        <div style="margin-top:8px">d<sub>M</sub> = |x₂-x₁| + |y₂-y₁|</div>
+        <div style="margin-top:8px">cos(θ) = A·B / |A||B|</div>
+      </div>
+      <!-- chalk tray -->
+      <div style="position:absolute;bottom:-10px;left:0;right:0;height:10px;background:#5a3a1a;border-radius:0 0 4px 4px"></div>
+    </div>
+
+    <!-- Dr. Lamiaa figure -->
+    <div id="dr-figure" style="display:flex;flex-direction:column;align-items:center;margin-right:-10px;z-index:2;animation:drFloat 3s ease-in-out infinite">
+      <!-- Glow rings around photo -->
+      <div style="position:relative;margin-bottom:8px">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:110px;height:110px;border-radius:50%;border:2px solid rgba(255,217,61,0.4);animation:ringPulse 2s ease-in-out infinite"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:130px;height:130px;border-radius:50%;border:1px solid rgba(255,107,107,0.25);animation:ringPulse 2s ease-in-out infinite 0.6s"></div>
+        <!-- Sparkles -->
+        <div style="position:absolute;top:-8px;right:-5px;font-size:1rem;animation:sparkle 1.5s ease-in-out infinite">✨</div>
+        <div style="position:absolute;bottom:-5px;left:-8px;font-size:0.85rem;animation:sparkle 1.5s ease-in-out infinite 0.5s">💫</div>
+        <div style="position:absolute;top:5px;left:-12px;font-size:0.75rem;animation:sparkle 1.5s ease-in-out infinite 1s">⭐</div>
+        <!-- Photo -->
+        <div style="width:90px;height:90px;border-radius:50%;overflow:hidden;border:4px solid #ffd93d;box-shadow:0 0 30px rgba(255,217,61,0.8),0 0 60px rgba(255,107,107,0.4);position:relative;z-index:2">
+          <img src="dr-lamiaa.jpg" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:linear-gradient(135deg,#ff6b6b,#ffd93d);display:flex;align-items:center;justify-content:center;font-size:2.5rem\'>👩‍🏫</div>'">
+        </div>
+      </div>
+      <!-- Pointer stick -->
+      <div style="width:3px;height:60px;background:linear-gradient(180deg,#d4a96a,#8B6914);border-radius:2px;margin-bottom:4px;box-shadow:0 0 8px rgba(212,169,106,0.5)"></div>
+      <!-- Name tag -->
+      <div style="background:rgba(255,217,61,0.15);border:1px solid #ffd93d;border-radius:8px;padding:4px 10px;font-size:0.72rem;color:#ffd93d;white-space:nowrap;box-shadow:0 0 10px rgba(255,217,61,0.3)">✨ Dr. Lamiaa ✨</div>
+    </div>
+
+  </div>
+
+  <div class="slide-container">
+    <div class="slide-header">
+      <div class="slide-avatar-fallback" style="display:flex;overflow:hidden;border-radius:50%;width:50px;height:50px;flex-shrink:0">
+        <img src="dr-lamiaa.jpg" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='👩‍🏫'">
+      </div>
+      <div class="slide-title" id="slide-title">What are Similarity Measures?</div>
+      <div class="slide-counter" id="slide-counter">1 / 5</div>
+    </div>
+    <div class="slide-content" id="slide-content"></div>
+    <div class="slide-nav">
+      <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)" disabled>&#8594; السابق</button>
+      <button class="tts-btn" onclick="speakSlide()">&#128266; استمعي للشرح</button>
+      <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">التالي &#8592;</button>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORY 2 SCREEN -->
+<div id="cat2-screen" class="screen">
+  <div class="pipeline-bar" id="pipelineBar">
+    <div class="pipeline-step" id="pipe0">Image Input</div>
+    <div class="pipeline-arrow">&#8594;</div>
+    <div class="pipeline-step" id="pipe1">Preprocessing</div>
+    <div class="pipeline-arrow">&#8594;</div>
+    <div class="pipeline-step" id="pipe2">Feature Extraction</div>
+    <div class="pipeline-arrow">&#8594;</div>
+    <div class="pipeline-step" id="pipe3">Classification</div>
+    <div class="pipeline-arrow">&#8594;</div>
+    <div class="pipeline-step" id="pipe4">Output</div>
+  </div>
+  <div class="chat-container" id="chatContainer"></div>
+  <div class="cat2-controls">
+    <button class="ctrl-btn next-btn" id="cat2NextBtn" onclick="nextExchange()">التالي &#9654;</button>
+    <button class="ctrl-btn tts-btn2" onclick="speakLastMsg()">&#128266; استمع</button>
+    <button class="ctrl-btn reset-btn" onclick="resetCat2()">&#8635; إعادة</button>
+  </div>
+</div>
+
+<!-- CATEGORY 3 SCREEN -->
+<div id="cat3-screen" class="screen">
+  <div class="game-header">
+    <div class="score-display">&#127942; النقاط: <span id="scoreDisplay">0</span></div>
+    <div class="level-badge" id="levelBadge">المستوى 1</div>
+    <div class="timer-wrap">
+      <div class="timer-bar-bg"><div class="timer-bar" id="timerBar"></div></div>
+    </div>
+  </div>
+  <div class="question-card" id="questionCard">
+    <div class="q-level-tag" id="qLevelTag">Level 1: Pattern Spotter &#128065;</div>
+    <div class="q-text" id="qText"></div>
+    <div class="options-grid" id="optionsGrid"></div>
+    <div class="q-feedback" id="qFeedback"></div>
+    <button class="next-q-btn" id="nextQBtn" onclick="nextQuestion()">السؤال التالي &#8594;</button>
+  </div>
+</div>
+
+<!-- RESULT SCREEN -->
+<div id="result-screen" class="screen">
+  <div class="result-card">
+    <span class="result-emoji" id="resultEmoji">&#127942;</span>
+    <div class="result-score" id="resultScore">0 / 9</div>
+    <div class="result-title" id="resultTitle">نتيجتك</div>
+    <div class="result-desc" id="resultDesc"></div>
+    <button class="replay-btn" onclick="replayCat3()">العب تاني &#128260;</button>
+  </div>
+</div>
+
+<script>
+// ===== STARS BACKGROUND =====
+(function(){
+  var c = document.getElementById('stars');
+  for(var i=0;i<80;i++){
+    var s = document.createElement('div');
+    s.className = 'star';
+    var size = Math.random()*3+1;
+    s.style.cssText = 'width:'+size+'px;height:'+size+'px;top:'+Math.random()*100+'%;left:'+Math.random()*100+'%;animation-delay:'+Math.random()*3+'s;animation-duration:'+(2+Math.random()*3)+'s';
+    c.appendChild(s);
+  }
+})();
+
+// ===== SCREEN MANAGEMENT =====
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  var bb = document.getElementById('backBtn');
+  if(id === 'home-screen'){
+    bb.style.display = 'none';
+  } else {
+    bb.style.display = 'block';
+  }
+  if(id === 'cat1-screen') initCat1();
+  if(id === 'cat2-screen') initCat2();
+  if(id === 'cat3-screen') initCat3();
+}
+
+function goHome(){
+  stopTimer();
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  showScreen('home-screen');
+}
+
+// ===== CATEGORY 1: SLIDESHOW =====
+var currentSlide = 0;
+
+var slides = [
+  {
+    title: 'What are Similarity Measures? &#129300;',
+    ttsText: 'What are Similarity Measures? In Pattern Recognition, we ask: how do we know if two patterns are similar? Similarity Measures are tools that measure the closeness or distance between patterns. The smaller the distance, the more similar the patterns are.',
+    subtitle: 'ما هي مقاييس التشابه؟ في التعرف على الأنماط نسأل: كيف نعرف إن نمطين متشابهين؟',
+    html: '<p style="margin-bottom:10px">In <strong style="color:#ff6b6b">Pattern Recognition</strong>, we ask: how do we know if two patterns are similar?</p><p style="margin-bottom:10px"><strong style="color:#ffd93d">Similarity Measures</strong> are tools that measure the closeness or distance between patterns.</p><p style="margin-bottom:10px">The smaller the distance, the more similar the patterns!</p><div class="points-visual"><div class="point-badge">A (2, 3)</div><div style="display:flex;align-items:center;color:#ffd93d;font-size:1.5rem">&#8596;</div><div class="point-badge">B (5, 7)</div></div>'
+  },
+  {
+    title: 'Euclidean Distance &#128207;',
+    ttsText: 'Euclidean Distance is the straight-line distance between two points, like measuring with a ruler. The formula is: d equals the square root of the sum of squared differences in x and y. For example, A at 2 comma 3 and B at 5 comma 7. d equals the square root of 9 plus 16, which equals 5.',
+    subtitle: 'المسافة الإقليدية: المسافة المباشرة بين نقطتين — زي ما بتقيس بالمسطرة',
+    html: '<p style="margin-bottom:10px">The <strong style="color:#ffd93d">straight-line distance</strong> between two points — like measuring with a ruler!</p><div class="formula-box">d = &#8730;[(x&#8322;-x&#8321;)&#178; + (y&#8322;-y&#8321;)&#178;]</div><div class="example-box"><strong style="color:#ffd93d">Example:</strong> A=(2,3), B=(5,7)<br>d = &#8730;[(5-2)&#178; + (7-3)&#178;] = &#8730;[9+16] = &#8730;25 = <strong style="color:#6bcb77">5</strong></div><div class="note-box">&#128161; Measures the shortest possible path between two points</div>'
+  },
+  {
+    title: 'Manhattan Distance &#127961;',
+    ttsText: 'Manhattan Distance is the sum of absolute differences in each direction. Like walking through city streets — you can only move horizontally or vertically, not diagonally. For A at 2 comma 3 and B at 5 comma 7, the distance is 3 plus 4 equals 7.',
+    subtitle: 'مسافة مانهاتن: زي ما بتمشي في شوارع المدينة — يمين/شمال وفوق/تحت بس',
+    html: '<p style="margin-bottom:10px">Like walking through <strong style="color:#ffd93d">city streets</strong> — only horizontal & vertical moves allowed!</p><div class="formula-box">d = |x&#8322;-x&#8321;| + |y&#8322;-y&#8321;|</div><div class="example-box"><strong style="color:#ffd93d">Example:</strong> A=(2,3), B=(5,7)<br>d = |5-2| + |7-3| = 3 + 4 = <strong style="color:#6bcb77">7</strong></div><div class="note-box">&#9888; Manhattan Distance &#8805; Euclidean Distance always!</div>'
+  },
+  {
+    title: 'Cosine Similarity &#128208;',
+    ttsText: 'Cosine Similarity measures the angle between two vectors, not the distance. The formula is cosine of theta equals A dot B divided by the product of their magnitudes. The range is from negative 1 to 1. A value of 1 means identical direction, 0 means perpendicular, and negative 1 means opposite directions.',
+    subtitle: 'تشابه جيب التمام: بيقيس الزاوية بين الـ vectors مش المسافة — بيستخدم كتير في معالجة النصوص',
+    html: '<p style="margin-bottom:10px">Measures the <strong style="color:#ffd93d">angle</strong> between vectors — not the distance!</p><div class="formula-box">cos(&#952;) = (A&#183;B) / (|A| &#215; |B|)</div><div class="example-box"><strong style="color:#ffd93d">Range:</strong> -1 to 1<br>&#9989; 1 = Identical direction<br>&#9898; 0 = Perpendicular (90°)<br>&#10060; -1 = Opposite directions</div><div class="note-box">&#128161; Widely used in NLP and text comparison!</div>'
+  },
+  {
+    title: 'Test Yourself! &#129504;',
+    ttsText: 'Test yourself! Given two points A at 1 comma 0 and B at 0 comma 1, what is the Euclidean Distance between them?',
+    subtitle: 'اختبري نفسك! لو عندنا نقطتين A=(1,0) و B=(0,1)، الـ Euclidean Distance بينهم كام؟',
+    html: '<p style="margin-bottom:15px;font-size:1.1rem"><strong style="color:#ffd93d">&#10067; Question:</strong> Given A=(1,0) and B=(0,1), what is the Euclidean Distance?</p><div class="quiz-options" id="quizOpts"><button class="quiz-opt" onclick="checkQuiz(this,0)">&#8730;2</button><button class="quiz-opt" onclick="checkQuiz(this,1)">1</button><button class="quiz-opt" onclick="checkQuiz(this,2)">2</button><button class="quiz-opt" onclick="checkQuiz(this,3)">&#8730;3</button></div><div class="feedback-box" id="quizFeedback"></div>'
+  }
+];
+
+function initCat1(){
+  currentSlide = 0;
+  renderSlide();
+}
+
+function renderSlide(){
+  var s = slides[currentSlide];
+  document.getElementById('slide-title').innerHTML = s.title;
+  document.getElementById('slide-counter').textContent = (currentSlide+1) + ' / ' + slides.length;
+  document.getElementById('prevBtn').disabled = currentSlide === 0;
+  document.getElementById('nextBtn').disabled = currentSlide === slides.length - 1;
+  // Content + Arabic subtitle
+  document.getElementById('slide-content').innerHTML =
+    s.html +
+    '<div style="margin-top:15px;padding:10px 15px;background:rgba(255,217,61,0.08);border-right:3px solid #ffd93d;border-radius:0 10px 10px 0;font-size:0.88rem;color:#ffd93d;direction:rtl;text-align:right">' +
+    '&#128250; ' + s.subtitle + '</div>';
+}
+
+function changeSlide(dir){
+  playSlide();
+  currentSlide += dir;
+  if(currentSlide < 0) currentSlide = 0;
+  if(currentSlide >= slides.length) currentSlide = slides.length - 1;
+  renderSlide();
+}
+
+function getBestVoice(lang){
+  var voices = window.speechSynthesis.getVoices();
+  if(!voices || voices.length === 0) return null;
+  // Female name keywords
+  var femaleNames = ['female','zira','hazel','susan','karen','samantha','victoria','moira','fiona','tessa','helena','laura','linda','anna','sara','laila','rana','hoda','fatima'];
+  function isFemale(v){
+    var n = v.name.toLowerCase();
+    return femaleNames.some(function(f){ return n.indexOf(f) !== -1; });
+  }
+  if(lang === 'ar'){
+    return voices.find(function(v){ return v.lang.indexOf('ar') !== -1 && isFemale(v); }) ||
+           voices.find(function(v){ return v.lang.indexOf('ar') !== -1; }) || null;
+  } else {
+    return voices.find(function(v){ return v.lang === 'en-US' && isFemale(v); }) ||
+           voices.find(function(v){ return v.lang === 'en-GB' && isFemale(v); }) ||
+           voices.find(function(v){ return v.lang.indexOf('en') !== -1 && isFemale(v); }) ||
+           voices.find(function(v){ return v.lang === 'en-US'; }) ||
+           voices.find(function(v){ return v.lang.indexOf('en') !== -1; }) ||
+           voices[0];
+  }
+}
+
+function speakText(text, lang){
+  if(!window.speechSynthesis) return;
+  if(isMuted) return;
+  window.speechSynthesis.cancel();
+  setTimeout(function(){
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = lang === 'ar' ? 'ar-EG' : 'en-US';
+    u.rate = lang === 'ar' ? 0.85 : 0.9;
+    u.pitch = lang === 'ar' ? 1.2 : 1.1;
+    u.volume = 1;
+    var doSpeak = function(){
+      var voice = getBestVoice(lang);
+      if(voice) u.voice = voice;
+      window.speechSynthesis.speak(u);
+    };
+    var voices = window.speechSynthesis.getVoices();
+    if(voices.length === 0){
+      window.speechSynthesis.addEventListener('voiceschanged', function handler(){
+        window.speechSynthesis.removeEventListener('voiceschanged', handler);
+        doSpeak();
+      });
+    } else {
+      doSpeak();
+    }
+  }, 200);
+}
+
+function speakSlide(){
+  speakText(slides[currentSlide].ttsText, 'en');
+}
+
+function speakLastMsg(){
+  if(!lastMsgText) return;
+  speakText(lastMsgText, 'en');
+}
+
+function checkQuiz(btn, idx){
+  var opts = document.querySelectorAll('.quiz-opt');
+  opts.forEach(function(o){o.disabled=true;});
+  var fb = document.getElementById('quizFeedback');
+  fb.style.display = 'block';
+  if(idx === 0){
+    playCorrect();
+    btn.classList.add('correct');
+    fb.className = 'feedback-box correct';
+    fb.innerHTML = '&#10004; ممتاز! &#8730;[(1-0)&#178;+(0-1)&#178;] = &#8730;[1+1] = &#8730;2 &#127881;';
+  } else {
+    playWrong();
+    btn.classList.add('wrong');
+    opts[0].classList.add('correct');
+    fb.className = 'feedback-box wrong';
+    fb.innerHTML = '&#10008; الإجابة الصحيحة هي &#8730;2! &#8730;[(1-0)&#178;+(0-1)&#178;] = &#8730;2';
+  }
+}
+</script>
+
+<script>
+// ===== CATEGORY 2: PROJECT DISCUSSION =====
+var cat2Index = 0;
+var lastMsgText = '';
+
+var exchanges = [
+  {
+    pipeActive: [0],
+    msgs: [
+      {who:'student', name:'Maryam Fathy', text:'Dr. Lamiaa, our team wants to build a Smart Attendance System using Face Recognition. Could you walk us through the full pipeline?', sub:'دكتورة، فريقنا عايز يبني نظام حضور ذكي باستخدام التعرف على الوجه. ممكن تشرحيلنا الـ pipeline؟'},
+      {who:'dr', name:'Dr. Lamiaa', text:'Great idea, Maryam! The pipeline starts with Image Input — we use a camera to capture images of students in the classroom. This image is our raw input that feeds into the entire system.', sub:'فكرة ممتازة! الـ pipeline بيبدأ بـ Image Input — بنستخدم كاميرا تلتقط صور الطلاب. الصورة دي هي الـ raw input بتاعنا.'}
+    ]
+  },
+  {
+    pipeActive: [1],
+    msgs: [
+      {who:'student', name:'Maryam Fathy', text:'Got it! So what happens after we capture the image?', sub:'تمام! وبعد ما ناخد الصورة، إيه اللي بيحصل؟'},
+      {who:'dr', name:'Dr. Lamiaa', text:'The second step is Preprocessing — we apply: Grayscale conversion to reduce complexity, Noise removal using a Gaussian filter, and Face detection using Haar Cascade or MTCNN to isolate the face from the background.', sub:'الخطوة التانية هي Preprocessing — تحويل للرمادي، إزالة الضوضاء، وكشف الوجه عشان نعزله من الصورة.'}
+    ]
+  },
+  {
+    pipeActive: [2],
+    msgs: [
+      {who:'student', name:'Maryam Fathy', text:'Interesting! And after preprocessing, how do we actually identify who the student is?', sub:'ومثير للاهتمام! وبعد الـ preprocessing، إزاي بنعرف مين الطالب ده؟'},
+      {who:'dr', name:'Dr. Lamiaa', text:'This is the most critical step — Feature Extraction! We use PCA to extract Eigenfaces, or a Deep Learning CNN to automatically learn facial features. These features are encoded into a feature vector.', sub:'دي أهم خطوة — Feature Extraction! بنستخدم PCA أو CNN عشان نستخرج الـ features وتتحول لـ feature vector.'}
+    ]
+  },
+  {
+    pipeActive: [2],
+    msgs: [
+      {who:'student', name:'Maryam Fathy', text:'So the feature vector essentially represents the student\'s face as numbers?', sub:'يعني الـ feature vector بيمثل وش الطالب كأرقام؟'},
+      {who:'dr', name:'Dr. Lamiaa', text:'Exactly! Each student has a unique feature vector — like a digital fingerprint. This vector is stored in our database. When a new student appears, we extract their vector and compare it against all stored vectors.', sub:'بالظبط! كل طالب عنده feature vector مميز زي بصمته الرقمية. بيتخزن في الـ database وبنقارنه بالـ vectors الموجودة.'}
+    ]
+  },
+  {
+    pipeActive: [3],
+    msgs: [
+      {who:'student', name:'Maryam Fathy', text:'How is that comparison done? Is this where Similarity Measures come in?', sub:'إزاي بتتعمل المقارنة دي؟ هنا بيجي دور الـ Similarity Measures؟'},
+      {who:'dr', name:'Dr. Lamiaa', text:'Absolutely right, Maryam! This is exactly where we apply Euclidean Distance or Cosine Similarity. We compute the distance between the new vector and every vector in the database, then select the closest match.', sub:'صح تماماً! هنا بنطبق Euclidean Distance أو Cosine Similarity. بنحسب المسافة ونختار أقرب vector.'}
+    ]
+  },
+  {
+    pipeActive: [3],
+    msgs: [
+      {who:'student', name:'Maryam Fathy', text:'Which classifier would you recommend we use for this system?', sub:'أنهو classifier تنصحينا نستخدمه في النظام ده؟'},
+      {who:'dr', name:'Dr. Lamiaa', text:'We have several options! KNN — simple and effective. SVM — highly accurate. Or a Neural Network — best for large datasets. Each has trade-offs between accuracy and speed.', sub:'عندنا خيارات! KNN بسيط وفعال، SVM دقيق جداً، أو Neural Network لو عندنا data كتير.'}
+    ]
+  },
+  {
+    pipeActive: [4],
+    msgs: [
+      {who:'student', name:'Maryam Fathy', text:'What does the final output of the system look like?', sub:'وفي الآخر الـ output بيكون إيه؟'},
+      {who:'dr', name:'Dr. Lamiaa', text:'The output is: the student\'s name plus a confidence score. If confidence exceeds 85%, attendance is recorded automatically. Otherwise, the system requests manual verification.', sub:'الـ output هو اسم الطالب + confidence score. لو فوق 85% بيتسجل الحضور تلقائياً، لو تحته بيطلب تأكيد يدوي.'}
+    ]
+  },
+  {
+    pipeActive: [0,1,2,3,4],
+    msgs: [
+      {who:'student', name:'Maryam Fathy', text:'Wow, the full pipeline makes perfect sense now! Thank you so much, Dr. Lamiaa!', sub:'ياه! الـ pipeline كامل منطقي جداً دلوقتي. شكراً جزيلاً دكتورة لمياء!'},
+      {who:'dr', name:'Dr. Lamiaa', text:'You are very welcome, Maryam! This is a wonderful example of applying Pattern Recognition in the real world. Best of luck with your graduation project! Remember — every step connects to a concept we covered in the course!', sub:'العفو يا مريم! ده مثال رائع على تطبيق Pattern Recognition في الحياة الحقيقية. ربنا يوفقك في الـ graduation project!'}
+    ]
+  }
+];
+
+function initCat2(){
+  cat2Index = 0;
+  lastMsgText = '';
+  document.getElementById('chatContainer').innerHTML = '';
+  updatePipeline([]);
+  document.getElementById('cat2NextBtn').disabled = false;
+}
+
+function updatePipeline(activeArr){
+  for(var i=0;i<5;i++){
+    var el = document.getElementById('pipe'+i);
+    if(el) el.classList.toggle('active', activeArr.indexOf(i) !== -1);
+  }
+}
+
+function makeAvatar(who){
+  if(who === 'dr'){
+    return '<div class="msg-avatar-fallback" style="background:linear-gradient(135deg,#ff6b6b,#ffd93d);border:3px solid #6bcb77;width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">&#128105;&#8205;&#127979;</div>';
+  } else {
+    return '<div class="msg-avatar-fallback student-av" style="background:linear-gradient(135deg,#4d96ff,#6bcb77);border:3px solid #4d96ff;width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">&#128105;&#8205;&#127891;</div>';
+  }
+}
+
+function nextExchange(){
+  playClick();
+  if(cat2Index >= exchanges.length){
+    document.getElementById('cat2NextBtn').disabled = true;
+    return;
+  }
+  var ex = exchanges[cat2Index];
+  updatePipeline(ex.pipeActive);
+  var container = document.getElementById('chatContainer');
+  ex.msgs.forEach(function(msg){
+    var div = document.createElement('div');
+    div.className = 'chat-msg ' + msg.who;
+    var nameClass = msg.who === 'student' ? 'msg-name student-name' : 'msg-name';
+    var subHtml = msg.sub ? '<div style="margin-top:6px;padding:6px 10px;background:rgba(255,217,61,0.08);border-radius:8px;font-size:0.8rem;color:#ffd93d;direction:rtl;text-align:right">&#128250; ' + msg.sub + '</div>' : '';
+    div.innerHTML = makeAvatar(msg.who) +
+      '<div class="msg-body">' +
+        '<div class="' + nameClass + '">' + msg.name + '</div>' +
+        '<div class="msg-bubble">' + msg.text + subHtml + '</div>' +
+      '</div>';
+    container.appendChild(div);
+    lastMsgText = msg.text.replace(/<[^>]+>/g,'');
+  });
+  container.scrollTop = container.scrollHeight;
+  cat2Index++;
+  if(cat2Index >= exchanges.length){
+    document.getElementById('cat2NextBtn').disabled = true;
+  }
+}
+
+function resetCat2(){
+  initCat2();
+}
+</script>
+
+<script>
+// ===== CATEGORY 3: QUIZ GAME =====
+var cat3Score = 0;
+var cat3QIndex = 0;
+var timerInterval = null;
+var timerSeconds = 20;
+
+var questions = [
+  // Level 1: Pattern Spotter
+  {
+    level: 'Level 1: Pattern Spotter &#128065;',
+    levelNum: 1,
+    text: 'أنهو شكل مختلف عن الباقيين؟',
+    options: ['&#128308;', '&#128308;', '&#128309;', '&#128308;'],
+    correct: 2,
+    feedbackOk: 'ممتاز! &#127881; عينك شافت الـ outlier فوراً  ده بالظبط اللي بيعمله الـ Pattern Recognition!',
+    feedbackWrong: 'مش صح! الـ pattern الغريب هو &#128309;  لأنه مختلف في اللون عن الباقيين.'
+  },
+  {
+    level: 'Level 1: Pattern Spotter &#128065;',
+    levelNum: 1,
+    text: 'الـ sequence دي: 2, 4, 8, 16, __  الرقم الجاي إيه؟',
+    options: ['18', '24', '32', '20'],
+    correct: 2,
+    feedbackOk: 'صح! &#129504; الـ pattern هو ضرب في 2 كل مرة  ده geometric sequence recognition!',
+    feedbackWrong: 'الإجابة 32! الـ pattern هو ضرب في 2: 2&#215;2=4, 4&#215;2=8, 8&#215;2=16, 16&#215;2=32'
+  },
+  {
+    level: 'Level 1: Pattern Spotter &#128065;',
+    levelNum: 1,
+    text: 'أنهو feature الأهم لتمييز قطة عن كلب؟',
+    options: ['اللون', 'شكل الأذن', 'الحجم', 'الوزن'],
+    correct: 1,
+    feedbackOk: 'ممتاز! &#128049; شكل الأذن هو discriminative feature  القطط عندهم ودان مثلثة والكلاب مختلفة!',
+    feedbackWrong: 'الإجابة: شكل الأذن! هو الـ most discriminative feature بين القطط والكلاب.'
+  },
+  // Level 2: Feature Detective
+  {
+    level: 'Level 2: Feature Detective &#128269;',
+    levelNum: 2,
+    text: 'عندنا نقطتين: A=(3,4) و B=(0,0). الـ Euclidean Distance بينهم كام؟',
+    options: ['5', '7', '4', '6'],
+    correct: 0,
+    feedbackOk: 'صح! &#127919; &#8730;(3&#178;+4&#178;) = &#8730;(9+16) = &#8730;25 = 5  ده الـ 3-4-5 triangle الشهير!',
+    feedbackWrong: 'الإجابة 5! &#8730;(3&#178;+4&#178;) = &#8730;25 = 5'
+  },
+  {
+    level: 'Level 2: Feature Detective &#128269;',
+    levelNum: 2,
+    text: 'الـ Manhattan Distance بين A=(1,2) و B=(4,6) كام؟',
+    options: ['5', '7', '6', '8'],
+    correct: 1,
+    feedbackOk: 'ممتاز! |4-1|+|6-2| = 3+4 = 7 &#127961;',
+    feedbackWrong: 'الإجابة 7! |4-1|+|6-2| = 3+4 = 7'
+  },
+  {
+    level: 'Level 2: Feature Detective &#128269;',
+    levelNum: 2,
+    text: 'الـ Cosine Similarity بين vectors متطابقين تماماً بتساوي؟',
+    options: ['0', '-1', '1', '0.5'],
+    correct: 2,
+    feedbackOk: 'صح! &#127881; لو الـ vectors في نفس الاتجاه، الزاوية = 0، وcos(0) = 1',
+    feedbackWrong: 'الإجابة 1! vectors متطابقة &#8594; زاوية = 0 &#8594; cos(0) = 1'
+  },
+  // Level 3: Bayesian Master
+  {
+    level: 'Level 3: Bayesian Master &#129504;',
+    levelNum: 3,
+    text: 'في Bayesian Decision Theory، الـ Prior Probability بتمثل إيه؟',
+    options: ['احتمال الـ feature', 'احتمال الـ class قبل ما نشوف الـ data', 'دقة الـ classifier', 'عدد الـ samples'],
+    correct: 1,
+    feedbackOk: 'ممتاز! &#129504; الـ Prior هو معرفتنا المسبقة عن الـ class قبل ما نشوف أي data جديدة!',
+    feedbackWrong: 'الإجابة: احتمال الـ class قبل ما نشوف الـ data  ده الـ Prior Probability!'
+  },
+  {
+    level: 'Level 3: Bayesian Master &#129504;',
+    levelNum: 3,
+    text: 'لو P(spam)=0.3 و P(email|spam)=0.8، إيه P(spam)&#215;P(email|spam)؟',
+    options: ['0.24', '0.8', '0.3', '0.56'],
+    correct: 0,
+    feedbackOk: 'صح! P(spam)&#215;P(email|spam) = 0.3&#215;0.8 = 0.24  ده الـ numerator في Bayes theorem!',
+    feedbackWrong: 'الإجابة 0.24! P(spam)&#215;P(email|spam) = 0.3&#215;0.8 = 0.24'
+  },
+  {
+    level: 'Level 3: Bayesian Master &#129504;',
+    levelNum: 3,
+    text: 'الـ Bayes Classifier بيختار الـ class اللي؟',
+    options: ['عندها أقل features', 'عندها أعلى posterior probability', 'عندها أكبر عدد samples', 'عندها أقل variance'],
+    correct: 1,
+    feedbackOk: 'ممتاز! &#127942; الـ Bayes Classifier بيختار argmax P(class|x)  الـ class اللي عندها أعلى posterior!',
+    feedbackWrong: 'الإجابة: أعلى posterior probability  ده هو الـ MAP (Maximum A Posteriori) decision rule!'
+  }
+];
+
+function initCat3(){
+  cat3Score = 0;
+  cat3QIndex = 0;
+  document.getElementById('scoreDisplay').textContent = '0';
+  // Shuffle questions كل مرة
+  for(var i = questions.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = questions[i];
+    questions[i] = questions[j];
+    questions[j] = temp;
+  }
+  renderQuestion();
+}
+
+function renderQuestion(){
+  if(cat3QIndex >= questions.length){
+    showResult();
+    return;
+  }
+  var q = questions[cat3QIndex];
+  document.getElementById('qLevelTag').innerHTML = q.level;
+  document.getElementById('levelBadge').textContent = 'Level ' + q.levelNum;
+  // Show character based on level: Dr. Lamiaa for even questions, Maryam for odd
+  var charHtml = '<div style="display:flex;align-items:center;gap:12px;margin-bottom:15px">' +
+    '<div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#ff6b6b,#ffd93d);display:flex;align-items:center;justify-content:center;font-size:22px;border:3px solid #ffd93d;flex-shrink:0">&#128105;&#8205;&#127979;</div>' +
+    '<div style="font-size:0.85rem;color:#ffd93d;font-style:italic">Dr. Lamiaa asks...</div>' +
+    '<div style="width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#4d96ff,#6bcb77);display:flex;align-items:center;justify-content:center;font-size:22px;border:3px solid #4d96ff;flex-shrink:0;margin-right:auto">&#128105;&#8205;&#127891;</div>' +
+    '</div>';
+  document.getElementById('qText').innerHTML = charHtml + q.text;
+  var grid = document.getElementById('optionsGrid');
+  grid.innerHTML = '';
+  q.options.forEach(function(opt, i){
+    var btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.innerHTML = opt;
+    btn.onclick = function(){ answerQuestion(i, btn); };
+    grid.appendChild(btn);
+  });
+  var fb = document.getElementById('qFeedback');
+  fb.style.display = 'none';
+  fb.className = 'q-feedback';
+  document.getElementById('nextQBtn').style.display = 'none';
+  startTimer();
+}
+
+function answerQuestion(idx, btn){
+  stopTimer();
+  var q = questions[cat3QIndex];
+  var btns = document.querySelectorAll('.opt-btn');
+  btns.forEach(function(b){ b.disabled = true; });
+  var fb = document.getElementById('qFeedback');
+  fb.style.display = 'block';
+  if(idx === q.correct){
+    playCorrect();
+    btn.classList.add('correct');
+    fb.className = 'q-feedback correct';
+    fb.innerHTML = '&#10004; ' + q.feedbackOk;
+    cat3Score++;
+    document.getElementById('scoreDisplay').textContent = cat3Score;
+  } else {
+    playWrong();
+    btn.classList.add('wrong');
+    btns[q.correct].classList.add('correct');
+    fb.className = 'q-feedback wrong';
+    fb.innerHTML = '&#10008; ' + q.feedbackWrong;
+  }
+  document.getElementById('nextQBtn').style.display = 'block';
+}
+
+function nextQuestion(){
+  cat3QIndex++;
+  renderQuestion();
+}
+
+function startTimer(){
+  stopTimer();
+  timerSeconds = 20;
+  var bar = document.getElementById('timerBar');
+  bar.style.width = '100%';
+  bar.style.transition = 'none';
+  setTimeout(function(){
+    bar.style.transition = 'width 20s linear';
+    bar.style.width = '0%';
+  }, 50);
+  timerInterval = setInterval(function(){
+    timerSeconds--;
+    if(timerSeconds <= 0){
+      stopTimer();
+      var btns = document.querySelectorAll('.opt-btn');
+      var allDisabled = true;
+      btns.forEach(function(b){ if(!b.disabled) allDisabled = false; });
+      if(!allDisabled){
+        btns.forEach(function(b){ b.disabled = true; });
+        var q = questions[cat3QIndex];
+        if(q){
+          btns[q.correct] && btns[q.correct].classList.add('correct');
+          var fb = document.getElementById('qFeedback');
+          fb.style.display = 'block';
+          fb.className = 'q-feedback wrong';
+          fb.innerHTML = '&#9201; انتهى الوقت! ' + q.feedbackWrong;
+          document.getElementById('nextQBtn').style.display = 'block';
+        }
+      }
+    }
+  }, 1000);
+}
+
+function stopTimer(){
+  if(timerInterval){ clearInterval(timerInterval); timerInterval = null; }
+}
+
+function showResult(){
+  stopTimer();
+  showScreen('result-screen');
+  document.getElementById('resultScore').textContent = cat3Score + ' / 9';
+  var emoji, title, desc;
+  if(cat3Score === 9){
+    emoji = '&#127942;'; title = 'عبقرية! أنتِ Classifier من الدرجة الأولى!';
+    desc = 'أنتِ حققتِ الدرجة الكاملة! عقلك يعمل بدقة الـ Bayes Optimal Classifier!';
+    launchConfetti();
+  } else if(cat3Score >= 7){
+    emoji = '&#127775;'; title = 'ممتازة! عقلك بيفكر زي الـ Machine!';
+    desc = 'أداء رائع! أنتِ فاهمة الـ Pattern Recognition كويس جداً.';
+    launchConfetti();
+  } else if(cat3Score >= 5){
+    emoji = '&#128522;'; title = 'كويس! بس في شوية concepts محتاجة مراجعة';
+    desc = 'راجعي الـ Similarity Measures والـ Bayesian Theory وهتبقي أحسن!';
+  } else {
+    emoji = '&#128170;'; title = 'استمري! Pattern Recognition محتاج تدريب';
+    desc = 'مش مشكلة! راجعي المحاضرات وحاولي تاني  هتتحسني بالتأكيد!';
+  }
+  document.getElementById('resultEmoji').innerHTML = emoji;
+  document.getElementById('resultTitle').textContent = title;
+  document.getElementById('resultDesc').textContent = desc;
+}
+
+function replayCat3(){
+  document.getElementById('confettiContainer').innerHTML = '';
+  showScreen('cat3-screen');
+}
+
+function launchConfetti(){
+  playWin();
+  var container = document.getElementById('confettiContainer');
+  container.innerHTML = '';
+  var colors = ['#ff6b6b','#6bcb77','#4d96ff','#ffd93d','#ff9ff3','#54a0ff'];
+  for(var i=0;i<50;i++){
+    var piece = document.createElement('div');
+    piece.className = 'confetti-piece';
+    piece.style.left = Math.random()*100 + '%';
+    piece.style.background = colors[Math.floor(Math.random()*colors.length)];
+    piece.style.animationDuration = (2+Math.random()*3) + 's';
+    piece.style.animationDelay = Math.random()*2 + 's';
+    piece.style.width = (8+Math.random()*12) + 'px';
+    piece.style.height = (8+Math.random()*12) + 'px';
+    piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    container.appendChild(piece);
+  }
+  setTimeout(function(){ container.innerHTML = ''; }, 6000);
+}
+</script>
+
+<!-- ===== AI ASSISTANT WIDGET ===== -->
+<style>
+#ai-widget{position:fixed;bottom:25px;right:25px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+#ai-bubble{width:65px;height:65px;border-radius:50%;background:linear-gradient(135deg,#ffd93d,#ff6b6b);border:3px solid #fff;box-shadow:0 4px 20px rgba(255,217,61,0.6);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:28px;transition:all 0.3s;animation:aiFloat 3s ease-in-out infinite}
+#ai-bubble:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(255,217,61,0.8)}
+@keyframes aiFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+#ai-bubble.speaking{animation:aiPulse 0.6s ease-in-out infinite;border-color:#6bcb77;box-shadow:0 0 25px rgba(107,203,119,0.8)}
+@keyframes aiPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+#ai-panel{background:rgba(15,20,50,0.97);backdrop-filter:blur(15px);border:2px solid rgba(255,217,61,0.4);border-radius:20px;padding:15px;width:280px;box-shadow:0 10px 40px rgba(0,0,0,0.5);display:none;flex-direction:column;gap:10px}
+#ai-panel.open{display:flex}
+#ai-panel-header{display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:10px}
+#ai-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#ff6b6b,#ffd93d);display:flex;align-items:center;justify-content:center;font-size:20px;border:2px solid #ffd93d;flex-shrink:0}
+#ai-name{font-size:0.9rem;font-weight:700;color:#ffd93d}
+#ai-status{font-size:0.75rem;color:#6bcb77}
+#ai-text{font-size:0.88rem;line-height:1.6;color:#ddd;min-height:60px;direction:ltr;text-align:left}
+#ai-text-ar{font-size:0.82rem;line-height:1.5;color:#ffd93d;direction:rtl;text-align:right;border-top:1px solid rgba(255,255,255,0.08);padding-top:8px;margin-top:4px}
+#ai-controls{display:flex;gap:8px;flex-wrap:wrap}
+.ai-ctrl-btn{flex:1;padding:7px 10px;border-radius:15px;border:1.5px solid;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:0.8rem;font-weight:700;transition:all 0.3s;background:transparent}
+.ai-ctrl-btn.en{border-color:#4d96ff;color:#4d96ff}
+.ai-ctrl-btn.en:hover{background:#4d96ff;color:#fff}
+.ai-ctrl-btn.ar{border-color:#ffd93d;color:#ffd93d}
+.ai-ctrl-btn.ar:hover{background:#ffd93d;color:#1a1a2e}
+.ai-ctrl-btn.stop{border-color:#ff6b6b;color:#ff6b6b}
+.ai-ctrl-btn.stop:hover{background:#ff6b6b;color:#fff}
+#ai-wave{display:flex;gap:3px;align-items:center;height:20px;margin-top:4px}
+#ai-wave span{display:inline-block;width:4px;background:#6bcb77;border-radius:2px;animation:wave 1s ease-in-out infinite}
+#ai-wave span:nth-child(2){animation-delay:0.1s}
+#ai-wave span:nth-child(3){animation-delay:0.2s}
+#ai-wave span:nth-child(4){animation-delay:0.3s}
+#ai-wave span:nth-child(5){animation-delay:0.4s}
+@keyframes wave{0%,100%{height:4px}50%{height:18px}}
+#ai-wave{display:none}
+#ai-wave.active{display:flex}
+</style>
+
+<div id="ai-widget">
+  <div id="ai-panel">
+    <div id="ai-panel-header">
+      <div id="ai-avatar">👩‍🏫</div>
+      <div>
+        <div id="ai-name">Dr. Lamiaa AI</div>
+        <div id="ai-status">Ready to explain ✨</div>
+      </div>
+    </div>
+    <div id="ai-text">Hi! I'm Dr. Lamiaa. Click a button below and I'll explain what's on screen!</div>
+    <div id="ai-text-ar">أنا د. لمياء — اضغطي على زرار وهشرحلك اللي على الشاشة!</div>
+    <div id="ai-wave"><span></span><span></span><span></span><span></span><span></span></div>
+    <div id="ai-controls">
+      <button class="ai-ctrl-btn en" onclick="aiSpeak('en')">🔊 English</button>
+      <button class="ai-ctrl-btn ar" onclick="aiSpeak('ar')">🔊 عربي</button>
+      <button class="ai-ctrl-btn stop" onclick="aiStop()">⏹ Stop</button>
+    </div>
+  </div>
+  <div id="ai-bubble" onclick="toggleAiPanel()" title="Dr. Lamiaa AI Assistant">👩‍🏫</div>
+</div>
+
+<script>
+// ===== AUDIO ENGINE =====
+var AudioCtx = window.AudioContext || window.webkitAudioContext;
+var audioCtx = null;
+var bgGainNode = null;
+var bgPlaying = false;
+var audioUnlocked = false;
+var isMuted = false;
+
+function getAudioCtx(){
+  if(!audioCtx) audioCtx = new AudioCtx();
+  return audioCtx;
+}
+
+// Unlock audio on first user interaction
+document.addEventListener('click', function unlockAudio(){
+  if(audioUnlocked) return;
+  audioUnlocked = true;
+  getAudioCtx();
+  if(audioCtx.state === 'suspended') audioCtx.resume();
+  startBgMusic();
+  document.removeEventListener('click', unlockAudio);
+}, {once: false});
+
+// Global click sound on all buttons (except audio controls)
+document.addEventListener('click', function(e){
+  var t = e.target;
+  if(t.tagName === 'BUTTON' && t.id !== 'globalMuteBtn' && !t.classList.contains('ai-ctrl-btn')){
+    playClick();
+  }
+  if(t.classList.contains('cat-card')) playClick();
+});
+
+// --- CLICK SOUND ---
+function playClick(){
+  if(isMuted) return;
+  try{
+    var ctx = getAudioCtx();
+    var o = ctx.createOscillator();
+    var g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.type = 'sine';
+    o.frequency.setValueAtTime(600, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(900, ctx.currentTime + 0.08);
+    g.gain.setValueAtTime(0.18, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.12);
+  }catch(e){}
+}
+
+// --- CORRECT ANSWER SOUND (happy chime) ---
+function playCorrect(){
+  if(isMuted) return;
+  try{
+    var ctx = getAudioCtx();
+    var notes = [523, 659, 784, 1047]; // C E G C
+    notes.forEach(function(freq, i){
+      var o = ctx.createOscillator();
+      var g = ctx.createGain();
+      o.connect(g); g.connect(ctx.destination);
+      o.type = 'sine';
+      o.frequency.value = freq;
+      var t = ctx.currentTime + i * 0.12;
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(0.22, t + 0.04);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
+      o.start(t);
+      o.stop(t + 0.35);
+    });
+  }catch(e){}
+}
+
+// --- WRONG ANSWER SOUND (low buzz) ---
+function playWrong(){
+  if(isMuted) return;
+  try{
+    var ctx = getAudioCtx();
+    var o = ctx.createOscillator();
+    var g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.type = 'sawtooth';
+    o.frequency.setValueAtTime(180, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(80, ctx.currentTime + 0.3);
+    g.gain.setValueAtTime(0.15, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.35);
+  }catch(e){}
+}
+
+// --- SLIDE CHANGE SOUND ---
+function playSlide(){
+  try{
+    var ctx = getAudioCtx();
+    var o = ctx.createOscillator();
+    var g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.type = 'sine';
+    o.frequency.setValueAtTime(400, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.1);
+    g.gain.setValueAtTime(0.1, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.15);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.15);
+  }catch(e){}
+}
+
+// --- WIN / CONFETTI SOUND ---
+function playWin(){
+  if(isMuted) return;
+  try{
+    var ctx = getAudioCtx();
+    var melody = [523,659,784,1047,1319,1047,784,1047];
+    melody.forEach(function(freq,i){
+      var o = ctx.createOscillator();
+      var g = ctx.createGain();
+      o.connect(g); g.connect(ctx.destination);
+      o.type = 'sine';
+      o.frequency.value = freq;
+      var t = ctx.currentTime + i * 0.1;
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(0.2, t + 0.03);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.25);
+      o.start(t);
+      o.stop(t + 0.25);
+    });
+  }catch(e){}
+}
+
+// --- BACKGROUND MUSIC (energetic game music) ---
+function startBgMusic(){
+  if(bgPlaying) return;
+  try{
+    var ctx = getAudioCtx();
+    bgGainNode = ctx.createGain();
+    bgGainNode.gain.value = 0.06;
+    bgGainNode.connect(ctx.destination);
+    bgPlaying = true;
+    scheduleBgMusic(ctx, ctx.currentTime);
+  }catch(e){}
+}
+
+function scheduleBgMusic(ctx, startTime){
+  if(!bgPlaying) return;
+
+  var bpm = 128;
+  var beat = 60 / bpm;
+  var bar = beat * 4;
+  var bars = 8;
+  var totalDur = bar * bars;
+
+  // --- BASS LINE (punchy low notes) ---
+  var bassNotes = [65,65,73,65, 65,65,73,82, 65,65,73,65, 65,73,82,87];
+  bassNotes.forEach(function(freq, i){
+    var o = ctx.createOscillator();
+    var g = ctx.createGain();
+    var dist = ctx.createWaveShaper();
+    // soft distortion curve
+    var curve = new Float32Array(256);
+    for(var k=0;k<256;k++){ var x=(k*2/256)-1; curve[k]=x*(3+10)/(1+10*Math.abs(x)); }
+    dist.curve = curve;
+    o.connect(dist); dist.connect(g); g.connect(bgGainNode);
+    o.type = 'sawtooth';
+    o.frequency.value = freq;
+    var t = startTime + i * beat * 0.5;
+    g.gain.setValueAtTime(0, t);
+    g.gain.linearRampToValueAtTime(0.5, t + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.001, t + beat * 0.45);
+    o.start(t);
+    o.stop(t + beat * 0.5);
+  });
+
+  // --- MELODY (bright lead) ---
+  var melodyNotes = [
+    523,0,659,0, 784,659,523,0,
+    523,0,659,784, 1047,0,784,659
+  ];
+  melodyNotes.forEach(function(freq, i){
+    if(freq === 0) return;
+    var o = ctx.createOscillator();
+    var g = ctx.createGain();
+    o.connect(g); g.connect(bgGainNode);
+    o.type = 'square';
+    o.frequency.value = freq;
+    var t = startTime + i * beat * 0.5;
+    g.gain.setValueAtTime(0, t);
+    g.gain.linearRampToValueAtTime(0.12, t + 0.01);
+    g.gain.exponentialRampToValueAtTime(0.001, t + beat * 0.4);
+    o.start(t);
+    o.stop(t + beat * 0.5);
+  });
+
+  // --- KICK DRUM (every beat) ---
+  for(var b=0; b<bars*4; b++){
+    (function(bi){
+      var t = startTime + bi * beat;
+      var o = ctx.createOscillator();
+      var g = ctx.createGain();
+      o.connect(g); g.connect(bgGainNode);
+      o.type = 'sine';
+      o.frequency.setValueAtTime(150, t);
+      o.frequency.exponentialRampToValueAtTime(40, t + 0.08);
+      g.gain.setValueAtTime(0.7, t);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+      o.start(t);
+      o.stop(t + 0.15);
+    })(b);
+  }
+
+  // --- HI-HAT (every half beat) ---
+  for(var h=0; h<bars*8; h++){
+    (function(hi){
+      var t = startTime + hi * beat * 0.5;
+      var bufSize = ctx.sampleRate * 0.05;
+      var buf = ctx.createBuffer(1, bufSize, ctx.sampleRate);
+      var data = buf.getChannelData(0);
+      for(var n=0;n<bufSize;n++) data[n] = (Math.random()*2-1);
+      var src = ctx.createBufferSource();
+      src.buffer = buf;
+      var filter = ctx.createBiquadFilter();
+      filter.type = 'highpass';
+      filter.frequency.value = 8000;
+      var g = ctx.createGain();
+      src.connect(filter); filter.connect(g); g.connect(bgGainNode);
+      g.gain.setValueAtTime(0.08, t);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
+      src.start(t);
+      src.stop(t + 0.05);
+    })(h);
+  }
+
+  // Loop
+  setTimeout(function(){
+    if(bgPlaying) scheduleBgMusic(ctx, startTime + totalDur);
+  }, (totalDur - 0.1) * 1000);
+}
+
+function toggleBgMusic(){
+  toggleMute();
+}
+
+function toggleMute(){
+  isMuted = !isMuted;
+  var btn = document.getElementById('globalMuteBtn');
+  if(isMuted){
+    if(btn){ btn.textContent = '🔇'; btn.classList.add('muted'); }
+    window.speechSynthesis && window.speechSynthesis.cancel();
+    if(bgGainNode) bgGainNode.gain.setTargetAtTime(0, getAudioCtx().currentTime, 0.3);
+  } else {
+    if(btn){ btn.textContent = '🔊'; btn.classList.remove('muted'); }
+    if(bgGainNode) bgGainNode.gain.setTargetAtTime(0.06, getAudioCtx().currentTime, 0.3);
+  }
+}
+</script>
+
+<!-- Single global mute button (fixed, always visible) -->
+<style>
+#globalMuteBtn{position:fixed;top:20px;right:20px;z-index:500;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.3);color:#fff;font-size:1.3rem;cursor:pointer;transition:all 0.3s;display:flex;align-items:center;justify-content:center}
+#globalMuteBtn:hover{background:rgba(255,255,255,0.25);transform:scale(1.1)}
+#globalMuteBtn.muted{border-color:#ff6b6b;background:rgba(255,107,107,0.2)}
+</style>
+<button id="globalMuteBtn" title="Mute / Unmute music">🎵</button>
+
+<script>
+// ===== AI ASSISTANT =====
+var aiPanelOpen = false;
+
+var aiScripts = {
+  'home-screen': {
+    en: "Welcome to Pattern Recognition World! I'm Dr. Lamiaa. You have three categories to explore: First, I'll explain Similarity Measures with interactive slides. Second, watch a discussion between Maryam and me about a Face Recognition graduation project. Third, test yourself with the Think Like a Machine quiz! Choose any category to begin.",
+    ar: "أهلاً بك في عالم التعرف على الأنماط! أنا د. لمياء. عندك ثلاث كاتيجوريز: الأولى هشرحلك Similarity Measures بسلايدز تفاعلية. التانية فيها حوار بيني وبين مريم عن مشروع التخرج. التالتة لعبة أسئلة تفاعلية. اختاري أي كاتيجوري تبدأي بيها!"
+  },
+  'cat1-screen': {
+    en: "You're now in the Similarity Measures lesson! I'll walk you through four key measures: Euclidean Distance, which is the straight-line distance between points. Manhattan Distance, like walking through city streets. Cosine Similarity, which measures the angle between vectors. Use the Next and Previous buttons to navigate slides, and click the Listen button on each slide to hear my explanation!",
+    ar: "أنتِ دلوقتي في درس Similarity Measures! هشرحلك أربع measures مهمين: Euclidean Distance وهي المسافة المباشرة. Manhattan Distance زي ما بتمشي في الشوارع. وCosine Similarity اللي بتقيس الزاوية بين الـ vectors. استخدمي أزرار التالي والسابق للتنقل، واضغطي على زرار الاستماع في كل slide!"
+  },
+  'cat2-screen': {
+    en: "Welcome to the Project Discussion! Watch a conversation between Maryam, our student, and me about building a Smart Face Recognition Attendance System. The pipeline has five steps: Image Input, Preprocessing, Feature Extraction, Classification, and Output. Click Next to reveal each part of the conversation, and watch the pipeline bar light up as we progress!",
+    ar: "أهلاً في قسم نقاش المشروع! هتشوفي حوار بيني وبين مريم عن بناء نظام حضور ذكي باستخدام التعرف على الوجه. الـ pipeline فيه خمس خطوات: Image Input، Preprocessing، Feature Extraction، Classification، والـ Output. اضغطي التالي عشان تشوفي الحوار خطوة بخطوة!"
+  },
+  'cat3-screen': {
+    en: "Welcome to Think Like a Machine! This quiz has nine questions across three levels. Level one is Pattern Spotter, where you identify patterns visually. Level two is Feature Detective, testing your knowledge of distance measures. Level three is Bayesian Master, covering probability and decision theory. You have twenty seconds per question — good luck!",
+    ar: "أهلاً في لعبة Think Like a Machine! فيه تسع أسئلة في ثلاث مستويات. المستوى الأول Pattern Spotter بتتعرفي على الأنماط بصرياً. المستوى التاني Feature Detective بيختبر معرفتك بمقاييس المسافة. المستوى التالت Bayesian Master عن الاحتمالات. عندك عشرين ثانية لكل سؤال — حظ سعيد!"
+  },
+  'result-screen': {
+    en: "Congratulations on finishing the quiz! Your score reflects your understanding of Pattern Recognition concepts. Remember, the key topics we covered are Similarity Measures, Feature Extraction, and Bayesian Decision Theory. Keep practicing and you'll master Pattern Recognition in no time!",
+    ar: "مبروك على إنهاء الاختبار! درجتك بتعكس فهمك لمفاهيم Pattern Recognition. تذكري إن المواضيع الأساسية اللي اتكلمنا عنها هي Similarity Measures وFeature Extraction والـ Bayesian Decision Theory. استمري في التدريب وهتتقني Pattern Recognition بسرعة!"
+  }
+};
+
+function getCurrentScreen(){
+  var screens = ['home-screen','cat1-screen','cat2-screen','cat3-screen','result-screen'];
+  for(var i=0;i<screens.length;i++){
+    var el = document.getElementById(screens[i]);
+    if(el && el.classList.contains('active')) return screens[i];
+  }
+  return 'home-screen';
+}
+
+function toggleAiPanel(){
+  aiPanelOpen = !aiPanelOpen;
+  var panel = document.getElementById('ai-panel');
+  if(aiPanelOpen){
+    panel.classList.add('open');
+    updateAiText();
+  } else {
+    panel.classList.remove('open');
+    aiStop();
+  }
+}
+
+function updateAiText(){
+  var screen = getCurrentScreen();
+  var script = aiScripts[screen] || aiScripts['home-screen'];
+  document.getElementById('ai-text').textContent = script.en;
+  document.getElementById('ai-text-ar').textContent = script.ar;
+}
+
+function aiSpeak(lang){
+  if(!window.speechSynthesis) return;
+  var screen = getCurrentScreen();
+  var script = aiScripts[screen] || aiScripts['home-screen'];
+  var text = lang === 'ar' ? script.ar : script.en;
+  document.getElementById('ai-bubble').classList.add('speaking');
+  document.getElementById('ai-wave').classList.add('active');
+  document.getElementById('ai-status').textContent = lang === 'ar' ? 'بتتكلم... 🎙️' : 'Speaking... 🎙️';
+  window.speechSynthesis.cancel();
+  setTimeout(function(){
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = lang === 'ar' ? 'ar-EG' : 'en-US';
+    u.rate = lang === 'ar' ? 0.85 : 0.9;
+    u.pitch = lang === 'ar' ? 1.2 : 1.1;
+    u.volume = 1;
+    u.onend = function(){
+      document.getElementById('ai-bubble').classList.remove('speaking');
+      document.getElementById('ai-wave').classList.remove('active');
+      document.getElementById('ai-status').textContent = 'Ready to explain ✨';
+    };
+    u.onerror = function(){
+      document.getElementById('ai-bubble').classList.remove('speaking');
+      document.getElementById('ai-wave').classList.remove('active');
+      document.getElementById('ai-status').textContent = 'Ready to explain ✨';
+    };
+    var doSpeak = function(){
+      var voice = getBestVoice(lang);
+      if(voice) u.voice = voice;
+      window.speechSynthesis.speak(u);
+    };
+    var voices = window.speechSynthesis.getVoices();
+    if(voices.length === 0){
+      window.speechSynthesis.addEventListener('voiceschanged', function handler(){
+        window.speechSynthesis.removeEventListener('voiceschanged', handler);
+        doSpeak();
+      });
+    } else {
+      doSpeak();
+    }
+  }, 200);
+}
+
+function aiStop(){
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  document.getElementById('ai-bubble').classList.remove('speaking');
+  document.getElementById('ai-wave').classList.remove('active');
+  document.getElementById('ai-status').textContent = 'Ready to explain ✨';
+}
+
+// Update AI text when screen changes
+var _origShowScreen = showScreen;
+showScreen = function(id){
+  _origShowScreen(id);
+  if(aiPanelOpen) updateAiText();
+  // Only stop AI speech, not all speech
+  document.getElementById('ai-bubble').classList.remove('speaking');
+  document.getElementById('ai-wave').classList.remove('active');
+  document.getElementById('ai-status').textContent = 'Ready to explain ✨';
+};
+
+// Wire mute button - background music only
+document.getElementById('globalMuteBtn').addEventListener('click', function(){
+  var btn = document.getElementById('globalMuteBtn');
+  if(!bgGainNode){
+    btn.textContent = '🔇';
+    btn.classList.add('muted');
+    return;
+  }
+  if(bgGainNode.gain.value > 0){
+    bgGainNode.gain.value = 0;
+    btn.textContent = '�';
+    btn.classList.add('muted');
+  } else {
+    bgGainNode.gain.value = 0.06;
+    btn.textContent = '🎵';
+    btn.classList.remove('muted');
+  }
+});
+</script>
+
+</body>
 </html>
